@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+        <title>All Remote Control FREE!</title>
+        <link rel="stylesheet" href="css/landscape.css">
+		<link rel="shortcut icon" type="image/png" href="ico/1.png">
+		<!-- <link rel="stylesheet" href="css/portrait.css"> -->
+		<script data-ad-client="ca-pub-5504078863829427" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    </head>
+    <body>		
+		<div id="PC" class="contPC nodisplay">
+			<div  class="left" ></div>
+			<div  class="center">
+				<div class="up"> 
+					<div class="icoCont"> <img  id="ico" class="ico" src="ico/1.png"></div>
+					<p class="tit" ><h class="ftit">A</h>ll <h class="ftit">R</h>emote <h class="ftit">C</h>ontrol <h class="ftit">FREE</h></p>
+				</div>
+				<div class="cc">
+					<img src="img/imgchula.png"></br>
+					<img class="dwnld" src="img/dwnld.png"></br>
+				</div>
+				<div class="down">
+				 All Remote Control FREE, el logo y  las imagenes son propiedad de Allrcf</br> 
+				 Al descargar el software y usar la plataforma online de All Remote Control FREE</br> 
+				 Esta aceptando los <a href="licencia.html"> Terminos y condiciones </a> de uso </br>
+				</div>
+			</div>
+			<div  class="right"></div>
+		</div>
+
+		<div id="DID" class="nodisplay"> 
+			<div class="inreg" >
+				<button type="button" onclick="loginDivice('{name}')" class="inLog">"{name}</button> 
+				<button type="button" onclick="delteDivice('{name}')" class="inMin"> - </button> 
+			</div>
+		</div>
+        <div id="NDID" class="nodisplay">
+			<div class="inreg" >
+				<input  type="text" class="inlab" value="Nombre:" readonly><input id="NAME" type="text"  value="" class="inInp">
+				<input  type="text" class="inlab" value="PASS:" readonly><input id="PASS" type="text" value="" class="inInp"> 
+				<button id="ADDD" type="button" onclick="addDivice()" value="DeJoy" class="inAdd">+</button>
+			</div>
+		</div>
+
+		<script src="ipword.js"></script>
+        <script type="text/javascript">	
+		
+			if  (isMobile()){
+				listDivice();
+			}else{
+				document.getElementById("PC").classList.replace( "nodisplay", "display" );
+				icomove();
+			}
+
+		//DETECTAND CELULAR//
+			function isMobile(){
+				return (
+					(navigator.userAgent.match(/Android/i)) ||
+					(navigator.userAgent.match(/webOS/i)) ||
+					(navigator.userAgent.match(/iPhone/i)) ||
+					(navigator.userAgent.match(/iPod/i)) ||
+					(navigator.userAgent.match(/iPad/i)) ||
+					(navigator.userAgent.match(/BlackBerry/i))
+				);
+			}
+			
+		//ICON MOVING//
+				
+		/*function icomove(icoImg, icoX){
+			document.getElementById("ico").src = "ico/"+icoImg+".png";
+			document.getElementById("ico").style.marginLeft = icoX+"%";
+			icoX = icoX + 1;
+			console.log(icoX);
+			
+			if(icoX >= 100){ 
+				icoX = -100;
+				(icoImg == 5)? icoImg = 1: ++icoImg;
+			}
+			setTimeout(icomove(icoImg, icoX), 100);
+		}*/
+		
+		function icomove() {
+		  var elem = document.getElementById("ico");
+		  var icoX = -100;
+		  var icoImg = 1;
+		  var id = setInterval(frame, 25);
+		  function frame() {
+			icoX = icoX + 1;
+			var aIcoX = Math.sign(icoX) * Math.pow((icoX/10),2);
+			console.log(icoX);
+			
+			if(icoX >= 100){ 
+				icoX = -100;
+				(icoImg == 4)? icoImg = 1: ++icoImg;
+			}
+		  		elem.src = "ico/"+icoImg+".png";
+				elem.style.marginLeft = aIcoX+"%";
+		  /*
+			if (pos == 350) {
+			  clearInterval(id);
+			} else {
+			  pos++;
+
+			}*/
+		  }
+		}
+		
+		//LISTADO PARA CELULAR //
+
+
+			function listDivice(){
+				console.log("ASD");
+				var DIDs = loadDID();
+				document.getElementById("DeLog").innerHTML = "";
+				for(let p in DIDs){
+					document.getElementById("DeLog").innerHTML += document.getElementById("DID").innerHTML.split("{name}").join(DIDs[p]["NAME"]);
+				}
+				document.getElementById("DeLog").innerHTML += document.getElementById("NDID").innerHTML;
+			}
+			
+			function loginDivice(name){
+				 selectDID(name);
+				 join();
+			}
+			
+			function delteDivice(name){
+				deleteDID(name);
+				listDivice();
+			}
+			
+			function addDivice(){
+				var name = document.getElementById("NAME").value;
+				var pass = document.getElementById("PASS").value;
+				newDID(name,pass);
+			}
+			
+		
+		//LOGN//
+		
+			function join(){
+				var DID = firstDID()
+				var HOST = word2ip(DID.PASS)+":3210";
+				var win = window.open("http://"+HOST, '_blank');
+				win.focus();
+				//open(location, '_self').close();
+			}	
+		
+		
+		//MANEJO DE LOCALSTORAGE//
+		
+			function newDID(name,pass){
+				var config = loadDID();
+				config.unshift({NAME:name, PASS:pass});
+				localStorage.setItem('DID', JSON.stringify(config));
+			}
+			function loadDID(){
+				if (existDID()){
+					return JSON.parse(localStorage.getItem('DID'));
+				}else{
+					return new Array();
+				}
+			}
+			function firstDID(){
+				var DID =  loadDID();
+				return DID[0];
+			}
+			function existDID(){			
+				return  localStorage.getItem('DID')? (localStorage.getItem('DID') != "[]"?true:false):false;
+			}
+			function deleteDID(name){
+				var config = loadDID();
+				var deleted = {};
+				for(let p in config){
+					if (config[p]["NAME"] == name){
+						deleted = config[p];
+						config.splice(p, 1);	
+					}
+				}
+				localStorage.setItem('DID', JSON.stringify(config));
+				return  deleted;
+			}
+			
+			function selectDID(name){
+				var config = loadDID();
+				var moved = {};
+				for(let p in config){
+					if (config[p]["NAME"] == name){
+						moved = config[p];
+						config.splice(p, 1);	
+					}
+				}
+				config.unshift(moved);
+				localStorage.setItem('DID', JSON.stringify(config));
+			}
+			
+			function deleteAllDID(){
+				localStorage.removeItem("DID");
+			}
+        </script>
+    </body>
+</html>

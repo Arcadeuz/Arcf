@@ -1,0 +1,257 @@
+@media (orientation: portrait) {
+
+	body {
+		margin:0.5%;
+		background: linear-gradient(-45deg, #5264ee, #5e3ce7, #23a6d5, #23a4d5);
+		background-size: 400% 400%;
+		animation: gradient 15s ease infinite;
+	}
+
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+
+		.noRot{
+			-ms-transform: rotate(0); /* IE 9 */
+			-webkit-transform: rotate(0); /* Chrome, Safari, Opera */
+			transform: rotate(0);		
+			margin-top:0px;
+			margin-left:0px;
+
+		}
+		
+		.siRot{
+			-ms-transform: rotate(90deg); /* IE 9 */
+			-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+			transform: rotate(90deg);	
+			margin-top:0px;
+			margin-left:0px;
+			
+		}
+
+	.ContSelBtns{
+	  width:6vw;
+	  height: 95vh;
+	  border-radius: 1%;
+	  background: red;
+	  margin-left:94vw;
+
+
+	}
+
+
+
+	.SelBtns{
+		width: 6vw; /*IR*/
+		height:20vh;
+		font-size:3vh;
+		display:block;
+		background-color:#333;
+		text-align: left;
+		padding:0%;
+		line-height: 0.5%;
+		border-radius:3vh;
+		float:left; 
+		margin-right: 0.1%;
+		margin-top:10vh;
+		cursor: pointer;
+		transition: box-shadow 0.7s ease;
+		color: white;
+		text-align: center;
+
+		
+		
+	}
+	.SelIco {
+		width:100%;
+		-ms-transform: rotate(90deg); /* IE 9 */
+		-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+		transform: rotate(90deg);	
+		
+	}
+	.nodisplay {
+		display: none;
+	}
+
+	.display{
+		display: block;
+	}
+	/*Keyboard*/
+	::selection{background-color:none; color:inherit;}
+
+	.Contkeyboard{
+	  width:95vw;
+	  height: 95vh;
+	  background-color: #111;
+	  border-radius: 1%;
+	  padding: 2%;
+	  color: white;
+	  		-ms-transform: rotate(90deg); /* IE 9 */
+		-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+		transform: rotate(90deg);	
+	}
+
+
+
+	.key{
+		width: 9.9%; height:19.9%;
+		display:block;
+		background-color:#333;
+		text-align: left;
+		padding-left: 0.1%;
+		line-height: 0.5%;
+		border-radius:0.1%;
+		float:left; 
+		margin-left: 0.1%;
+		margin-bottom:0.1%;
+		cursor: pointer;
+		transition: box-shadow 0.7s ease;
+		color: white;
+		text-align: center;
+	}
+
+	.shift{width: 14.9%;}
+	.backspace {width:14.9%;}
+	.enter{width:13.7%;}
+	.space{width:59.8%;}
+	.hidden{visibility: hidden;}
+
+	.key:hover{box-shadow:0px 0px 10px #14B524; z-index:1000;}
+
+
+	/* MOUSE */
+
+	.ContMouse{
+	  width:97vw;
+	  min-width:95vh;
+	  height: 95vh;
+	  max-height:50vw;
+	  background: linear-gradient(0deg, #111, #222, #111, #222, #111, #222, #111, #222);
+	  border-radius: 1%;
+	  border: 1vw solid black;
+	  /*padding: 1vw;*/
+	  color: white;
+	}
+
+	.ClickCont{
+		width:35vw; 
+		height:14vh; 
+		float:left;  
+		margin-left:32vw;
+		/*background-color: #222;*/
+	}
+	.ContClickCent{
+		width: 30%; 
+		height:100%;
+		float:left;
+	}
+	.TouchCont{
+		width:93vw; 
+		height:70vh; 
+		float:left;  
+		background: #222;
+		  border: 1vw solid black;
+		  margin-left: 1vw;
+
+	}
+
+
+	.ClickBtn{
+		width: 30%; height:100%;
+		display:block;
+		background-color:#333;
+		text-align: left;
+		padding-left: 0.1%;
+		line-height: 0.5%;
+		float:left; 
+		margin-left: 0.1%;
+		margin-bottom:0.1%;
+		cursor: pointer;
+		transition: box-shadow 0.7s ease;
+		color: white;
+		text-align: center;
+	}
+
+	.CBtnC{width:100%;height:33%}
+
+
+
+
+
+	/* CONTROLLER*/
+
+	.ContContAll{
+	  width:97vw;
+	  min-width:95vh;
+	  height: 95vh;
+	  max-height:50vw;
+	  background: linear-gradient(-45deg, #111, #111, #222, #111);
+	  border-radius: 1%;
+	  border: 1vw solid black;
+	  /*padding: 1vw;*/
+	  color: white;
+	}
+
+	.ContContArr{
+		width:35vw; 
+		height:35vw; 
+		margin-top: calc((95vh - 35vw -3vw)/2); 
+		float:left;  
+		/*background-color: #222;*/
+	}
+	.ContContFunc{
+		width:20vw; 
+		height:6vw;
+		margin-top: calc(95vh - 6vw - 5vw); 
+		float:left;  
+		/*background-color: #333;*/
+	}
+
+	.ContContBotn{
+		width:40vw; 
+		height:40vw; 
+		float:left;  
+		margin-top: calc((95vh - 40vw -3vw)/2); 
+		/*background-color: #444;*/
+		}
+
+	.JoyBtn{
+		width: 6.5%; height:15%;
+		display:block;
+		background-color:#333;
+		text-align: left;
+		padding-left: 0.1%;
+		line-height: 0.5%;
+		border-radius:50%;
+		float:left; 
+		margin-left: 0.1%;
+		margin-bottom:0.1%;
+		cursor: pointer;
+		transition: box-shadow 0.7s ease;
+		color: white;
+		text-align: center;
+	}
+
+	.BtnArrL{width:38%;height:38%;	border-radius:0%; background-color:#222;}
+	.BtnArrV{width:23%;height:38%;	border-radius:0%;}
+	.BtnArrH{width:38%;height:23%;	border-radius:0%;}
+	.BtnArrC{width:23%;height:23%}
+	.BAL1{border-top-left-radius:100%}
+	.BAL2{border-top-right-radius:100%}
+	.BAL3{border-bottom-left-radius:100%}
+	.BAL4{border-bottom-right-radius:100%}
+
+	.BtnArrF{width:40%;height:100%;margin-left:7%}
+	.BtnArr2A{width:40%;height:40%;margin:5%;}
+
+
+}

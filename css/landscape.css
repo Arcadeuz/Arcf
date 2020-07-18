@@ -1,0 +1,290 @@
+
+html {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+	body {
+		margin:0.5%;
+		width: 96vw;
+		height: 96vh;
+		background: linear-gradient(-45deg, #5264ee, #5e3ce7, #23a6d5, #23a4d5);
+		background-size: 400% 400%;
+		animation: gradient 15s ease infinite;
+	}
+
+	@keyframes gradient {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+
+		.noRot{
+			-ms-transform: rotate(0); /* IE 9 */
+			-webkit-transform: rotate(0); /* Chrome, Safari, Opera */
+			transform: rotate(0);		
+			margin-top:0px;
+			margin-left:0px;
+
+		}
+		
+		.siRot{
+			-ms-transform: rotate(90deg); /* IE 9 */
+			-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+			transform: rotate(90deg);	
+			margin-top:0px;
+			margin-left:0px;
+			
+		}
+		
+	.nodisplay {
+		display: none;
+	}
+
+	.display{
+		display: block;
+	}
+	
+	.hidden{
+		visibility: hidden;
+	}
+	
+	.inreg{
+		width: 99vw; /*IR*/
+		height:6vh;
+		min-height: 6vw;
+		display:block;	
+		margin-top: 1vh;
+	}
+	
+	.inLog{
+		width: 80%; /*IR*/
+		height:100%;
+		font-size:3vw;
+		display:block;
+		background-color:#333;
+		text-align: left;
+		padding: 0%;
+		line-height: 0.5%;
+		border-radius:3vh 0vh 0vh 3vh;
+		float:left; 
+		margin-left: 5%;
+		cursor: pointer;
+		transition: box-shadow 0.7s ease;
+		color: white;
+		text-align: center;
+	}
+	
+	.inMin{
+		width: 10%; /*IR*/
+		height:100%;
+		font-size:3vw;
+		display:block;
+		background-color:#333;
+		text-align: left;
+		padding: 0%;
+		line-height: 0.5%;
+		border-radius:0vh 3vh 3vh 0vh;
+		float:left; 
+		cursor: pointer;
+		transition: box-shadow 0.7s ease;
+		color: white;
+		text-align: center;
+	}
+
+	.inlab{
+		width: 13%; /*IR*/
+		height:100%;
+		font-size:3vw;
+		display:block;
+		background-color:#333;
+		text-align: left;
+		padding: 0%;
+		line-height: 0.5%;
+		border-radius:3vh 0vh 0vh 3vh;
+		margin-left: 5%;
+		float:left; 
+		cursor: pointer;
+		transition: box-shadow 0.7s ease;
+		color: white;
+		text-align: center;
+		
+		
+	}
+	.inInp{
+		width: 20%; /*IR*/
+		height:100%;
+		font-size:3vw;
+		display:block;
+		background-color:#333;
+		text-align: left;
+		padding: 0%;
+		line-height: 0.5%;
+		border-radius:0vh 3vh 3vh 0vh;
+		float:left; 
+		margin-right: calc((15% - 7vh)/2);
+		cursor: pointer;
+		transition: box-shadow 0.7s ease;
+		color: white;
+		text-align: center;
+	}
+	
+	
+	.inAdd{
+		width: 7vh; /*IR*/
+		height:7vh;
+		min-height:6vw;
+		min-width:6vw;
+		font-size:3vw;
+		display:block;
+		background-color:#333;
+		text-align: left;
+		padding: 0%;
+		line-height: 0.5%;
+		border-radius:50%;
+		float:left; 
+		margin-top:0.3%;
+		cursor: pointer;
+		transition: box-shadow 0.7s ease;
+		color: white;
+		text-align: center;
+	}
+	.contPC{
+		width: 100vw; 
+		height:100vh;
+		margin-top: -1vh;
+		margin-left: -1vw;
+	}
+
+	.left{
+		width: 10%; /* You must set a specified height */
+		height:100%;
+		float: left;
+		background-image: url("../img/imgleft.png"); /* The image used */
+		background-size: 100%;
+
+		background-color: #cccccc; /* Used if the image is unavailable */
+		background-position: center; /* Center the image */
+		background-repeat: repeat; /* Do not repeat the image */
+	}
+	
+	.center{
+	
+		width: 80%; /* You must set a specified height */
+		height:100%;
+		float: left;
+		background-size:cover;
+		/*background-image: url("../img/center.png");  The image used */
+		background-position: center; /* Center the image */
+	}
+		.up{
+
+			width: 100%; /* You must set a specified height */
+			height:8vh;
+			float: left;
+			background-color: #FFFFFF; /* Used if the image is unavailable */
+		}
+		
+			.icoCont{
+
+				width: 7vh; /* You must set a specified height */
+				height:7vh;
+				float: left;
+				overflow:hidden;
+				margin-left: 1vw;
+				margin-top:0.25vh;
+				border: 2px solid gray;
+				border-radius: 5px;
+				background-color: #FFFFFF; /* Used if the image is unavailable */
+			}
+			
+			.ico{
+				width: 100%; /* You must set a specified height */
+				height:100%;
+				margin-left: 0%;
+			}
+			
+			
+			.tit{
+				float: left;
+				margin-top: 1vh;
+				margin-left: 1vw;
+				font-weight: bold;
+				font-size: 6vh;
+				text-shadow: 1px 1px 2px black, 0 0 1em #5264ee, 0 0 0.2em #5e3ce7;
+				color: white;
+				font: "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+				animation: gradientext 15s ease infinite;
+
+			}
+			
+			.ftit{
+				 color: blue;
+			}
+			
+			
+
+			@keyframes gradientext {
+				0% {
+					text-shadow: 1px 1px 2px black, 0 0 1em #5e3ce7, 0 0 0.2em #23a6d5;
+				}
+				50% {
+					text-shadow: 1px 1px 2px black, 0 0 1em #23a6d5, 0 0 0.2em #23a4d5;
+				}
+				100% {
+					text-shadow: 1px 1px 2px black, 0 0 1em #23a4d5, 0 0 0.2em #5264ee;
+				}
+			}
+			
+		.cc{
+			width: 100%; /* You must set a specified height */
+			height:78vh;
+			float: left;
+			 text-align: center;
+			
+		}
+			.dwnld{
+				height:10vh;
+				
+			}
+		.down{
+			width: 100%; /* You must set a specified height */
+			height:14vh;
+			float: left;
+			background-color: #FFFFFF; /* Used if the image is unavailable */
+			text-align: center;
+			
+		}
+			
+	.right{
+		width: 10%; /* You must set a specified height */
+		height:100%;
+		float: left;
+		background-size:100%;
+		background-image: url("../img/imgleft.png"); /* The image used */
+		background-color: #cccccc; /* Used if the image is unavailable */
+		background-position: center; /* Center the image */
+		background-repeat: repeat; /* Do not repeat the image */
+		 -webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+
+
+	
+	
