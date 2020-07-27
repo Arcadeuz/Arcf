@@ -51,7 +51,9 @@ html {
 		}
 		
 	.nodisplay {
-		display: none;
+		width: 0px;
+		height: 0px;
+		overflow:hidden;
 	}
 
 	.display{
