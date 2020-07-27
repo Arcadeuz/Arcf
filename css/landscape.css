@@ -166,25 +166,13 @@ html {
 		width: 100vw; 
 		height:100vh;
 		margin-top: -1vh;
-		margin-left: -1vw;
+		margin-left: -0.5vw;
 	}
 
-	.left{
-		width: 10%; /* You must set a specified height */
-		height:100%;
-		float: left;
-		background-image: url("../img/imgleft.png"); /* The image used */
-		background-size: 100%;
-
-		background-color: #cccccc; /* Used if the image is unavailable */
-		background-position: center; /* Center the image */
-		background-repeat: repeat; /* Do not repeat the image */
-	}
-	
 	.center{
 	
-		width: 80%; /* You must set a specified height */
-		height:100%;
+		width: 100%; /* You must set a specified height */
+		height:80vh;
 		float: left;
 		background-size:cover;
 		/*background-image: url("../img/center.png");  The image used */
@@ -224,10 +212,10 @@ html {
 				margin-left: 1vw;
 				font-weight: bold;
 				font-size: 6vh;
-				text-shadow: 1px 1px 2px black, 0 0 1em #5264ee, 0 0 0.2em #5e3ce7;
+				text-transform: capitalize;
 				color: white;
 				font: "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
-				animation: gradientext 15s ease infinite;
+				-webkit-text-stroke: 1px black;
 
 			}
 			
@@ -235,34 +223,92 @@ html {
 				 color: blue;
 			}
 			
-			
-
-			@keyframes gradientext {
-				0% {
-					text-shadow: 1px 1px 2px black, 0 0 1em #5e3ce7, 0 0 0.2em #23a6d5;
-				}
-				50% {
-					text-shadow: 1px 1px 2px black, 0 0 1em #23a6d5, 0 0 0.2em #23a4d5;
-				}
-				100% {
-					text-shadow: 1px 1px 2px black, 0 0 1em #23a4d5, 0 0 0.2em #5264ee;
-				}
+			.clbr{
+				height:95%;	
+				float: right;
 			}
 			
+				.left{
+					width: 15%; /* You must set a specified height */
+					height:100%;
+					float: left;
+					/*//background-image: url("../img/imgleft.png");  The image used */
+					background-size: 100%;
+					/*background-color: #FFFFFF;  Used if the image is unavailable */
+					background-position: center; /* Center the image */
+					background-repeat: repeat; /* Do not repeat the image */
+				}
+					.menu{
+						margin-top:10vh;
+						margin-left:1vw;
+						width: 100%; /* You must set a specified height */
+						height:100%;
+						float: left;		
+					}
+					.mw{
+						font-family: "Arial Black", Gadget, sans-serif;
+						text-transform: capitalize;
+						text-align: center;
+						font-size: 3vh;
+						color: rgb(255, 255, 255);
+						text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+						 -webkit-text-stroke: 1px black;
+					}		
+					.mw:hover {
+						text-shadow: 1px 1px 2px black, 0 0 1em #FFFFFF, 0 0 1em #FFFFFF;
+						animation: gradientext 5s ease infinite;
+					}
+			
+								
+
+					@keyframes gradientext {
+						0% {
+							text-shadow: 1px 1px 2px black, 0 0 2em #FFFFFF, 0 0 0.2em #FFFFFF;
+						}
+						25%{
+							text-shadow: 1px 1px 2px black, 0 0 2em #FFFFFF, 0 0 0.5em #FFFFFF;
+						}
+						50% {
+							text-shadow: 1px 1px 2px black, 0 0 2em #FFFFFF, 0 0 1em #FFFFFF;
+						}
+						75%{
+							text-shadow: 1px 1px 2px black, 0 0 2em #FFFFFF, 0 0 0.5em #FFFFFF;
+						}
+						100% {
+							text-shadow: 1px 1px 2px black, 0 0 2em #FFFFFF, 0 0 0.2em #FFFFFF;
+						}
+					}
+			
+			
 		.cc{
-			width: 100%; /* You must set a specified height */
-			height:78vh;
+			width: 85%; /* You must set a specified height */
+			height:68vh;
 			float: left;
-			 text-align: center;
+			text-align: center;
+			overflow:hidden;
 			
 		}
+				.slidepage{
+					margin-top: 0;	
+					width: 100%;
+					height:68vh;
+					float:left;    
+					position: relative;							
+				}
+		
+		.dwnldCont{
+			width: 85%; /* You must set a specified height */
+			height:10vh;
+			float: left;
+			text-align: center;
+			overflow:hidden;
+		}
 			.dwnld{
-				height:10vh;
-				
+				height:75%;	
 			}
 		.down{
 			width: 100%; /* You must set a specified height */
-			height:14vh;
+			height:12vh;
 			float: left;
 			background-color: #FFFFFF; /* Used if the image is unavailable */
 			text-align: center;
@@ -286,5 +332,30 @@ html {
 	}
 
 
-	
-	
+
+.initxt{				
+		font-weight: bold;
+		font-size: 4vh;
+		color: white;
+		font: "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+		/*-webkit-text-stroke: 1px black;*/
+		text-align: center;
+}
+
+.initxtm{
+	color: black;
+}
+
+.iniimg{
+	float: center;
+	height:40vh;
+}
+
+.initxtT{				
+		font-weight: bold;
+		font-size: 5vh;
+		color: white;
+		font: "Bitstream Charter", "URW Bookman L", "Century Schoolbook L", serif;
+		text-align: center;
+		text-decoration-line: underline;
+}
