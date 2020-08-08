@@ -1,0 +1,8 @@
+NAME:TVA
+PASS:ALFHAXIU
+M1P:4
+OKJ:4
+NVJ:2
+vJoyConfPath:vJoyConf.exe
+vJoyPath:C;\Program Files\vJoy
+vJoyConfig:-f -a x y z rx -b 16 -p 2
