@@ -1,2 +1,3 @@
-version:2
-deletelist:
+version:pkgname:deletelist
+2:update:none
+1:hardupdate:all
