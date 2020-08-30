@@ -1,4 +1,4 @@
 version:pkgname:deletelist
-3:noupdate:delete1.xd,deleteb.xd,rsc\delete.ico
+3:noupdate:\public\ico\inet.png
 2:update:none
 1:hardupdate:all
