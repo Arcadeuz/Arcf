@@ -1,4 +1,4 @@
 version:pkgname:deletelist
-3:noupdate:\public\ico\inet.png
-2:update:none
+3:noupdate:public\ico\inet.png
+2:update:vJoyConf.exe
 1:hardupdate:all
