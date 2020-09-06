@@ -8,8 +8,8 @@
 		<link rel="shortcut icon" type="image/png" href="ico/1.png">
 		<!-- <link rel="stylesheet" href="css/portrait.css"> -->
 		<div id="fb-root"></div>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0&appId=751928852250925&autoLogAppEvents=1" nonce="6yWqmy3W"></script>    </head>
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0&appId=751928852250925&autoLogAppEvents=1" nonce="6yWqmy3W"></script>    </head>
     <body>	
 		<div id="DeLog"> </div>
 		<div id="PC" class="contPC nodisplay">
@@ -35,18 +35,31 @@
 							<h1 class="initxt" > <a class="initxtm" >ARCF</a> te permite tomar el control de tu <a class="initxtm" >PC</a> desde el <a class="initxtm" >Celular</a>.</br>
 								Con su interfaz totalmente intuitiva permite emular el <a class="initxtm" >teclado</a>, el <a class="initxtm" >mouse</a>, un control de
 								<a class="initxtm" >multimedia</a> y varios tipos de <a class="initxtm" >Pads y Joysticks</a>.</h1>								
-							<img class="iniimg" src="img/imgchula.png">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/kvSwMSh5q9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
 						<div class="slidepage">
 							<h1 class="initxtT" > Como instalar ARCF en tu PC </h1>
-							<h1 class="initxt" > Aca Irá un video muy explicativo</h1>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/-8hpd3CAZCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								
 						</div>
 						<div class="slidepage">
 							<h1 class="initxtT" > ¿Y ahora como funciona esto? </h1>
-							<h1 class="initxt" > Aca Irá un video muy explicativo</h1>
+							<h1 class="initxt" > Click cobre la imagen para hacer Zoom </h1>
+
+							<img class="iniimg" id="cua" style="height:40vh" onmousemove="moveimg(event,this.id)" onclick="maximg(this.id)" src="img/ComoUsar.jpg">
+
 						</div>
 						<div class="slidepage">
 							<h1 class="initxtT" > ¿Cuales son nuestros proximos pasos?</h1>
+							<h1 class="initxt" > * Lo primero es conseguir el dinero para costear un servidor; lo que nos permitirá mejorar
+								el servicio de emulación, reducir el peso del software, y lograr actualizaciones automáticas </h1></br>
+							<h1 class="initxt" > * Conseguir la firma digital para Arcf y su Instalador ya que son detectados como código malicioso, aunque
+								su código sea totalmente seguro.</h1>
+							<h1 class="initxt" > * Emular Joysticks a través de los giroscopios del celular. </h1>
+							<h1 class="initxt" > * Crear los Instaladores para Mac y Linux (Hasta el momento solo hemos creado el backend de estos)</h1>
+							<h1 class="initxt" > * Crear una Web con Juegos, la cual este completamente acoplada al servicio de ARCF de celular </h1>
+							<h1 class="initxt" > * El diseño y creación "física" de sticks y botones de bajo costo, adaptables a cualquier móvil, para conseguir emular joysticks
+								de una manera totalmente real</h1>
 						</div>
 						<div class="slidepage" id="col">
 								<h1 class="initxtT" > ¿Deseas ayudarnos a cumplir nuestros <a class="initxtm" onclick="slide(3)"> objetivos <a> ?</h1>
@@ -79,8 +92,7 @@
 						</div>
 						<div class="slidepage">
 							<h1 class="initxtT" > INSTALADORES de ARCF para Windows</h1>
-							<h1 class="initxt" > <a>Win x64</a></h1>
-							<h1 class="initxt" > <a>Win x86</a></h1>
+							<h1 class="initxt" ><a href="https://github.com/Arcadeuz/Arcf/raw/master/InstalFiles/Arcf_Setup.exe" download="Arcf para Windows">Arcf para Windows</a></h1>
 						</div>
 						<div class="slidepage">
 							<h1 class="initxtT" > INSTALADORES de ARCF para Linux & MAC</h1>
@@ -193,6 +205,32 @@
 		}
 		
 		*/
+		function maximg(b){
+			if (document.getElementById(b).style.height == "40vh"){
+			  document.getElementById(b).style.height = "90vh";
+			}else if (document.getElementById(b).style.height == "90vh"){
+			  document.getElementById(b).style.height = "150vh";
+			}else{
+			  document.getElementById(b).style.height = "40vh";
+				document.getElementById(b).style.marginTop = "0px";
+				document.getElementById(b).style.marginLeft = "0px";
+			}
+		}
+		function moveimg(e,b) {
+			var r = document.getElementById(b).parentNode.getBoundingClientRect(); 
+			var h = document.getElementById(b).getBoundingClientRect(); 
+			var xp = (e.clientX - (r.left + r.width/4))/(((r.left + r.width/4) + r.width/2) - (r.left + r.width/4));
+			xp = (xp > 1)?1:(xp<0)?0:xp;
+			var yp = (e.clientY - (r.top + r.height/4))/(((r.top + r.height/4) + r.height/2) - (r.top + r.height/4));
+			yp = (yp > 1)?1:(yp<0)?0:yp;
+
+			if (document.getElementById(b).style.height != "40vh"){
+				document.getElementById(b).style.marginTop =  -yp* 1.5 *  (h.height - r.height)+ "px";
+				document.getElementById(b).style.marginLeft = -xp *  (h.width - r.width)+ "px";
+			}
+		}
+				
+		
 		var cando = true;
 		function slide(n){
 			if (cando){

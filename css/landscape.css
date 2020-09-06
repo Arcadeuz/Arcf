@@ -295,8 +295,47 @@ html {
 					width: 100%;
 					height:68vh;
 					float:left;    
-					position: relative;							
+					position: relative;	
+					overflow-x: hidden;
+					overflow-y: scroll;
 				}
+		
+				/* Tamaño del scroll */
+				.slidepage::-webkit-scrollbar {
+				  width: 1vw;
+				  height: 1vh;
+				}
+
+				 /* Estilos barra (thumb) de scroll */
+				.slidepage::-webkit-scrollbar-thumb {
+				  background:linear-gradient(-45deg, #23a6d5, #5264ee, #23a6d5);;
+
+				  border-radius: 4px;
+				  height: 8px;
+
+				}
+
+				.slidepage::-webkit-scrollbar-thumb:active {
+				  	background-color:rgba(0, 0, 0, 0);
+
+				}
+
+				.slidepage::-webkit-scrollbar-thumb:hover {
+				  background: #b3b3b3;
+				  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+				}
+
+				 /* Estilos track de scroll */
+				.slidepage::-webkit-scrollbar-track {
+				  background-color:rgba(0, 0, 0, 0);
+				  border-radius: 4px;
+				}
+
+				.slidepage::-webkit-scrollbar-track:hover, 
+				.slidepage::-webkit-scrollbar-track:active {
+				  background-color:rgba(0, 0, 0, 0);
+				}
+		
 		
 		.dwnldCont{
 			width: 85%; /* You must set a specified height */
