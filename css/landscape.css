@@ -190,12 +190,12 @@ html {
 		
 			.icoCont{
 
-				width: 7vh; /* You must set a specified height */
-				height:7vh;
+				width: 6vh; /* You must set a specified height */
+				height:6vh;
 				float: left;
 				overflow:hidden;
 				margin-left: 1vw;
-				margin-top:0.25vh;
+				margin-top:0.7vh;
 				border: 2px solid gray;
 				border-radius: 5px;
 				background-color: #FFFFFF; /* Used if the image is unavailable */
